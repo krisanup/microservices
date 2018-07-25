@@ -1,6 +1,14 @@
 
 package com.akrislabs.microservice.forex.microserviceforexservice.vo;
 
+
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+import javax.persistence.Id;
+
 @Entity
 public class ExchangeValue {
   
