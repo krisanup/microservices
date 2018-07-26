@@ -37,12 +37,9 @@ public class ForexController {
     
     return exchangeValue;
   }
-  @RequestMapping(value = "/{firstName}/{lastName}", method = GET)
+  @RequestMapping(value = "/hello/{firstName}/{lastName}", method = GET)
     public String hello(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
-		
-    ExchangeValue exchangeValue = 
-        repository.findByFromAndTo("SGD", "INR");
-		System.out.println("exchangeValue"+exchangeValue);
+	   
         return format("{\"message\":\"Hello %s %s\"}", firstName, lastName);
     }
 }
